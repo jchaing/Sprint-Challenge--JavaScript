@@ -30,13 +30,49 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. Describe the biggest difference between `.forEach` & `.map`.
 
+      - ```.forEach``` is an interator function that is used for callbacks to
+      access items in array that comes back with each pass.
+
+      - Whereas ```.map``` is similar to ```.forEach```, but the difference is
+      that ```.map``` returns a new array of elements while in turn passing
+      each element back to the callback.
+
 2. What is the difference between a function and a method?
+
+      - Conventionally, a method is a function that is a member of an object
+      property, seperated by a dot notation. Whereas a function is standalone
+      function. Technically, a function is a method on the Global Scope of the
+      Window Object.
 
 3. What is closure?
 
+      - Closure is when a function is able to remember and access its lexical
+      scope even when that function is executing outside its lexical scope. It
+      only exists when an inner function makes use of variables defined from
+      an outer function that has returned.
+
 4. Describe the four rules of the 'this' keyword.
 
+      - Window/Global Object Binding - In the global scope or not inside of a
+      declared object, the value of "this" defaults to the Window/Global or
+      Console Object. In "strict mode", "this" on Global scope returns an error.
+
+      - Implicit Binding - When keyword "this" is inside of a declared object,
+      "this" will be the closest parent object, the object before the dot
+      notation.
+
+      - New Binding - When an object is created and returned by a constructor
+      function using the "new" keyword, "this" refers to the instance of that
+      object.
+
+      - Explicit Binding - Using the call, apply or bind methods, it tells the
+      function what object to use as "this".
+
 5. Why do we need super() in an extended class?
+
+      - We need super() in an extended class to tell a parent’s constructor
+      to be concerned with the child’s attributes vis versa and abstracts away
+      the Object.create(this, Class) syntax.
 
 ## Project Set up
 
@@ -65,11 +101,11 @@ Your finished project must include all of the following requirements:
 **Pro tip for this challenge: If something seems like it isn't working locally, copy and paste your code up to codepen and take another look at the console.**
 
 ## Task 1: Objects and Arrays
-Test your knowledge of objects and arrays. 
+Test your knowledge of objects and arrays.
 * [ ] Use the [objects-arrays.js](challenges/objects-arrays.js) link to get started.  Read the instructions carefully!
 
 ## Task 2: Functions
-This challenge takes a look at callbacks and closures as well as scope. 
+This challenge takes a look at callbacks and closures as well as scope.
 * [ ] Use the [functions.js](challenges/functions.js) link to get started. Read the instructions carefully!
 
 ## Task 3: Prototypes
